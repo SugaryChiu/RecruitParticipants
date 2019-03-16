@@ -1,0 +1,12 @@
+Technology Stack
+
+HTML
+CSS
+JavaScript
+   Vue.js
+PHP/C#/Java/Python
+mySQL
+
+API
+   User management
+   Subscription
