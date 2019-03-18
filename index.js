@@ -1,14 +1,19 @@
-const http = require('http');
+var express = require('express');
+var app = express();
 
-var nStatic = require('node-static');
+app.use(express.static('public'));
 
-var fileServer = new nStatic.Server('./public');
-
-const server = http.createServer(function(req,res){
-    fileServer.serve(req, res);
-});
+app.get('/', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.html");
+})
+app.get('/index.html', function (req, res) {
+   res.sendFile( __dirname + "/" + "index.html" );
+})
 
 const port = process.env.PORT || 1337;
-server.listen(port);
+var server = app.listen(port, function () {
+   var host = server.address().address
+   var port = server.address().port
 
-console.log("Server running at http://localhost:%d", port);
+   console.log("Service running at http://%s:%s", host, port)
+})
