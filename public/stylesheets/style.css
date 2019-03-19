@@ -1,0 +1,28 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color: pink;
+}
+
+
+.header img {
+  float: left;
+  width:200px;
+  height:auto;
+  margin-left:50px;
+}
+
+
+.header h1 {
+  position: relative;
+  color: deepskyblue;
+  font-family: cursive;
+  font-size: 300%;
+  top: 25px;
+  left: 10px;
+  /* margin-left: 150px; */
+}
+
+a {
+  color: #00B7FF;
+}
